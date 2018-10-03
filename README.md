@@ -1,7 +1,5 @@
 # Golang 101 workshop
-
-
-
+You will need to install golang before you can play with this.
 
 
 ## golang installation linux
@@ -26,6 +24,12 @@ go get golang.org/x/tools/cmd/goimports
 ```
 
 # go package management
+
+
+```
+go get -v github.com/egidijus/golang-101-workshop
+```
+
 
 # where to GO for documentation
 
