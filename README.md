@@ -62,7 +62,11 @@ Then apply the changes:
 source $HOME/.profile
 ```
 
-## Resources
+## Slides
+
+Just drag [slides.html](/slides.html) into your browser window!
+
+## Other resources
 
  - the [official website](https://golang.org/doc/)
  - additionally, many developers just inspect Go source code. It's filled with explanations - for example the HTTP server [Serve](https://golang.org/src/net/http/server.go?s=74015:74064#L2411) method
