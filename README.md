@@ -1,36 +1,38 @@
-# Golang 101 workshop
-You will need to install golang before you can play with this.
+# Go 101 workshop
 
+Practical intro to Go programming language.
 
-## golang installation linux
-##  download
-```
-wget https://dl.google.com/go/go1.11.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.11.linux-amd64.tar.gz
-mkdir ~/go
-```
+---
 
-## set paths
-add these paths to your bash/zsh profile
+Everyone wants a web site, but did you know you can have a fully-fledged HTTP server in less than 20 lines of Go?
 
-```
-export GOPATH=/home/$USER/go
-export GOROOT=/usr/local/go
-export GOBIN=/home/$USER/go/bin/
-```
-after you reload your terminal profile, you should be able to fetch go packages using go.
-```
-go get golang.org/x/tools/cmd/goimports
-```
+```go
+package main
 
-# go package management
+import (
+    "fmt"
+    "log"
+    "net/http"
+)
 
+func handler(w http.ResponseWriter, r *http.Request) {
+    fmt.Fprintf(w, "Hi there, I love %s!", r.URL.Path[1:])
+}
 
-```
-go get -v github.com/egidijus/golang-101-workshop
+func main() {
+    http.HandleFunc("/", handler)
+    log.Fatal(http.ListenAndServe(":8080", nil))
+}
 ```
 
+## Requirements
 
-# where to GO for documentation
+Follow the steps below to install Go on your machine:
 
-# tips for workflow
+- Download binaries - [https://golang.org/dl/](https://golang.org/dl/)
+- Follow the installation instructions - [https://golang.org/doc/install](https://golang.org/doc/install)
+
+## Resources
+
+ - the [official website](https://golang.org/doc/)
+ - additionally, many developers just inspect Go source code. It's filled with explanations - for example the HTTP server [Serve](https://golang.org/src/net/http/server.go?s=74015:74064#L2411) method
