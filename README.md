@@ -25,16 +25,42 @@ func main() {
 }
 ```
 
-## Start
+## How to setup your workspace
 
-Follow the steps below to install Go on your machine:
+Download binaries for your OS from [Go downloads](https://golang.org/dl/) page and then follow the steps below.
 
-1. Download binaries - [https://golang.org/dl/](https://golang.org/dl/)
-1. Follow the installation instructions - [https://golang.org/doc/install](https://golang.org/doc/install)
-1. Run `make slides`
-1. Open `http://localhost:8000` in your browser
+### macOS
 
+Execute the file you just downloaded, and follow the prompts to install the Go tools. The package installs the Go distribution to `/usr/local/go`.
 
+The package should put the `/usr/local/go/bin` directory in your `PATH` environment variable.
+
+```sh
+$ go version
+go version go1.11 darwin/amd64
+```
+
+### Linux
+
+First, download and install the binaries:
+
+```sh
+wget https://dl.google.com/go/go1.11.1.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.11.1.linux-amd64.tar.gz
+mkdir ~/go
+```
+
+Then add `/usr/local/go/bin` to the `PATH` environment variable. You can do this by adding this line to your `$HOME/.profile`:
+
+```sh
+export PATH=$PATH:/usr/local/go/bin
+```
+
+Then apply the changes:
+
+```sh
+source $HOME/.profile
+```
 
 ## Resources
 
