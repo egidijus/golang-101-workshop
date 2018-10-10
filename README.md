@@ -25,12 +25,16 @@ func main() {
 }
 ```
 
-## Requirements
+## Start
 
 Follow the steps below to install Go on your machine:
 
-- Download binaries - [https://golang.org/dl/](https://golang.org/dl/)
-- Follow the installation instructions - [https://golang.org/doc/install](https://golang.org/doc/install)
+1. Download binaries - [https://golang.org/dl/](https://golang.org/dl/)
+1. Follow the installation instructions - [https://golang.org/doc/install](https://golang.org/doc/install)
+1. Run `make slides`
+1. Open `http://localhost:8000` in your browser
+
+
 
 ## Resources
 
